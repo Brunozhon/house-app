@@ -1,0 +1,12 @@
+---
+layout: main
+title: House App | Project
+---
+<script src="../../script.js"></script>
+<h1>House App</h1>
+<p>Current floor: <span id="floor"></span></p>
+<script>
+  var floorElem = document.getElementById("floor")
+  var currentFloor = 1
+  floorElem.innerHTML = getFloors(house)[currentFloor - 1].name
+</script>
