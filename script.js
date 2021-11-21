@@ -5,7 +5,7 @@ function createHouseJSON() {
         "name": "First floor",
         "rooms": [
           {
-            "name": "Room 1"
+            "name": "Room 1",
             "size": {"x": 100, "y": 100}
           }
         ]
