@@ -9,5 +9,9 @@ title: House App | Project
 <script>
   var floorElem = document.getElementById("floor")
   var currentFloor = 1
+  var params = new URLSearchParams(location.search)
   floorElem.innerHTML = getFloors(house)[currentFloor - 1].name
+  if (!params.get("p")) {
+    location.search = "?p=" + uuid();
+  }
 </script>
