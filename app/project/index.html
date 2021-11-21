@@ -13,5 +13,13 @@ title: House App | Project
   floorElem.innerHTML = getFloors(house)[currentFloor - 1].name
   if (!params.get("p")) {
     location.search = "?p=" + uuid();
+  } else {
+    if (localStorage.get("project-" + params.get("p"))) {
+      house = localStorage.get("project-" + params.get("p"))
+      floorElem.innerHTML = getFloors(house)[currentFloor - 1].name
+    } else {
+      localStorage.set("project-" + params.get("p"), house)
+      floorElem.innerHTML = getFloors(house)[currentFloor - 1].name
+    }
   }
 </script>
