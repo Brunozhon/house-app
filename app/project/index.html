@@ -17,9 +17,11 @@ title: House App | Project
     if (localStorage.get("project-" + params.get("p"))) {
       house = localStorage.get("project-" + params.get("p"))
       floorElem.innerHTML = getFloors(house)[currentFloor - 1].name
+      alert("Got your old project! Keep working and keep doing what you do best!")
     } else {
       localStorage.set("project-" + params.get("p"), house)
       floorElem.innerHTML = getFloors(house)[currentFloor - 1].name
+      alert("Welcome to your new project! Work hard and do what you do best!")
     }
   }
 </script>
